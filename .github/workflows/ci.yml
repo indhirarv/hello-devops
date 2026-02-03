@@ -3,6 +3,8 @@ name: CI
 on:
   pull_request:
     branches: [ main ]
+  push:
+    branches: [ main ]
 
 jobs:
   build:
@@ -13,4 +15,5 @@ jobs:
 
     - name: Build Docker image
       run: docker build -t hello-devops .
+
 
